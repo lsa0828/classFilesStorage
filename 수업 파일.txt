@@ -1,7 +1,0 @@
-수업 파일
-- c++
-- python
-- DBProgramming
-- InternetProgramming
-- mobileAppProgramming
-- multiMediaProgramming
