@@ -3,7 +3,6 @@
 - c++
 - python
 - c
-- DBProgramming
 - InternetProgramming
 - mobileAppProgramming
 - multiMediaProgramming
