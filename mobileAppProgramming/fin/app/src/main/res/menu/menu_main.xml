@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_auth"
+        android:title="인증"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_board"
+        android:title="아름다운 순간" />
+    <item
+        android:id="@+id/menu_two"
+        android:title="순간 기록" />
+    <item
+        android:id="@+id/menu_three"
+        android:title="복지관 현황" />
+    <item
+        android:id="@+id/menu_more"
+        android:title="활동 검색" />
+    <item
+        android:id="@+id/menu_want"
+        android:title="미래의 순간" />
+    <item
+        android:id="@+id/menu_graph"
+        android:title="웃음지수" />
+    <item
+        android:id="@+id/menu_addr"
+        android:title="우편번호" />
+    <item
+        android:id="@+id/menu_main_setting"
+        android:title="설정" />
+</menu>

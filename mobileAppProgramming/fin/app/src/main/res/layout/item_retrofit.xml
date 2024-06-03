@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/item_sigungu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시군"
+                android:textStyle="bold"
+                android:textColor="#0000ff"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_sigungu"
+                android:layout_marginTop="3dp"
+                android:text="기관명"
+                android:textColor="#727272"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:lineSpacingExtra="2dp"
+        android:paddingLeft="10dp"
+        android:text="주소"
+        android:textColor="#212121"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/item_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:lineSpacingExtra="2dp"
+        android:paddingLeft="10dp"
+        android:text="연락처"
+        android:textColor="#212121"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="3dp"
+        android:background="#40000000" />
+
+</LinearLayout>

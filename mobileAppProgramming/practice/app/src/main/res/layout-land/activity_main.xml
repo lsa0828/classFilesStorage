@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="new layout resource file-> directory에 -land 추가
+                    androidx.appcompat 앱의 api 레벨 호환성 해결
+                    androidx.recyclerview 목록 화면 구성
+                    androidx.viewpager2 스와이프로 넘기는 화면 구성
+                    androidx.fragment 액티비티처럼 동작하는 뷰 제공
+                    androidx.drawerlayout 옆에서 서랍처럼 열리는 화면 구성" />
+
+</LinearLayout>
