@@ -1,0 +1,54 @@
+<!-- Search widget -->
+<div class="card mb-4">
+    <div class="card-header bg-dark text-white"><i class="fa-solid fa-magnifying-glass"></i> Search</div>
+    <div class="card-body">
+        <div class="input-group">
+            <input id="search-input" class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+            <button class="btn btn-dark text-white" id="button-search" type="button" onclick="searchItem()">Go!</button>
+        </div>
+    </div>
+</div>
+<script>
+    function searchItem(){
+        searchValue = document.getElementById('search-input').value.trim();
+        if(searchValue.length > 1){
+                    location.href = "/shop/search/" + searchValue + "/";
+        }
+        else {
+                    alert('검색어(' + searchValue + ')가 너무 짧아요.');
+        }
+    };
+
+    document.getElementById('search-input').addEventListener(
+        'keyup', function(event){
+            if(event.key === 'Enter'){
+                searchItem();
+            }
+        });
+</script>
+<!-- Categories widget-->
+<div class="card mb-4" id='category-card1'>
+    <div class="card-header bg-dark text-warning">Categories</div>
+    <div class="card-body">
+        <div class="row">
+            <ul class="list-unstyled mb-0">
+                {% for c in categories %}
+                    <li><a class="text-dark" href="{{c.get_absolute_url}}">{{c}} ({{c.item_set.count}})</a></li>
+                {% endfor %}
+                <li><a class="text-dark" href="/shop/category/no_category/">미분류 ({{no_category_item_count}})</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card mb-4" id='category-card2'>
+    <div class="card-header bg-dark text-warning">Makers</div>
+    <div class="card-body">
+        <div class="row">
+            <ul class="list-unstyled mb-0">
+                {% for m in makers %}
+                    <li><a class="text-dark" href="{{m.get_absolute_url}}">{{m}} ({{m.item_set.count}})</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

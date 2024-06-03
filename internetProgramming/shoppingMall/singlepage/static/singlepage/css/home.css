@@ -1,0 +1,11 @@
+body {
+    background: url('/static/singlepage/images/main_image.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#main-area {
+    background-color: rgba(255, 215, 0, 0.6);
+}

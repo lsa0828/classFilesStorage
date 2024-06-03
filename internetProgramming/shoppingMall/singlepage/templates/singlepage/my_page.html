@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+{% load humanize %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPage</title>
+    <link href="{% static 'shoppage/bootstrap/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="screen">
+    <link href="{% static 'singlepage/css/my_page.css' %}" rel="stylesheet" type="text/css" media="screen">
+    <script src="https://kit.fontawesome.com/edea15a092.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    {% include 'shoppage/navbar.html' %}
+
+    <div class="container"><br><br>
+        <div class="pt-4 pb-2 mx-auto text-center" style="width: 270px; border: 3px solid gold;">
+            {% if user.socialaccount_set.all.0.get_avatar_url %}
+                <img class="rounded" src="{{user.socialaccount_set.all.0.get_avatar_url}}" width="200px">
+            {% else %}
+                <img class="rounded" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" width="200px">
+            {% endif %}
+            <h3 class="mt-3">{{user.username}}</h3>
+            {% if user.email %}
+                <p>{{user.email}}</p>
+            {% endif %}
+        </div><br>
+        <div class="my-4">
+            <h2>&#60;My Comment List&#62;</h2>
+            <table width="100%">
+                <thead>
+                    <tr align="center">
+                        <th width="30%">Item</th>
+                        <th width="53%">Comment</th>
+                        <th width="17%">Created at</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in my_comment %}
+                    <tr>
+                        <td><a class="text-dark" href="{{c.item.get_absolute_url}}">{{c.item.name}}</a></td>
+                        <td><a class="text-dark" href="{{c.item.get_absolute_url}}">{{c.content}}</a></td>
+                        <td>{{c.created_at}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% if my_comment.count < 7 %}
+        <br><br><br><br><br><br>
+        <div class="fixed-bottom">
+            {% include 'shoppage/footer.html' %}
+        </div>
+    {% else %}
+        {% include 'shoppage/footer.html' %}
+    {% endif %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
